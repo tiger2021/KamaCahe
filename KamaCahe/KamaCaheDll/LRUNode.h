@@ -3,7 +3,7 @@
 #include <iostream>
 
 	template<typename Key, typename Value> 
-	class KLRUCache;
+	class LRUCache;
 	template <typename Key, typename Value>
 	class LRUNode
 	{
@@ -43,7 +43,7 @@
 		Value m_value;
 		size_t m_accessCount;
 		std::weak_ptr<LRUNode<Key, Value>> m_pre; //std::weak_ptr智能指针，防止循环引用
-		std::weak_ptr<LRUNode<Key, Value>> m_next;
+		std::shared_ptr<LRUNode<Key, Value>> m_next;
 
 		//友元类 能够访问private成员,protected成员和public成员
 		friend class KLRUCache<Key, Value>;
