@@ -17,31 +17,34 @@ public:
 
     virtual ~KLRUCache() noexcept override = default;
 
-    Value get(Key key) override {
-        Value value{};
-
-        // 先尝试从主缓存获取
+    bool get(Key key, Value& value) override {
         bool inMainCache = LRUCache<Key, Value>::get(key, value);
         size_t historyCount = m_historyList->get(key);
         ++historyCount;
         m_historyList->put(key, historyCount);  // 更新访问次数到历史记录
 
         if (inMainCache) {
-            return value;
+            return true;
         }
 
         if (historyCount >= m_k) {
             auto it = m_historyValueMap.find(key);
             if (it != m_historyValueMap.end()) {
-                Value storeValue = it->second;
+                value = it->second;
                 m_historyList->remove(key);
                 m_historyValueMap.erase(it);
 
                 // 添加到主缓存
-                LRUCache<Key, Value>::put(key, storeValue);
-                return storeValue;
+                LRUCache<Key, Value>::put(key, value);
+                return true;
             }
         }
+		return false;
+	}
+
+    Value get(Key key) override {
+        Value value{};
+		get(key, value);
         return value;
     }
 
@@ -68,5 +71,4 @@ private:
     int m_k;  // 进入缓存队列的最少访问次数
     std::unique_ptr<LRUCache<Key, size_t>> m_historyList; // 访问数据历史记录
     std::unordered_map<Key, Value> m_historyValueMap;     // 存储未达到K次访问的数据值
-    int m_test;
 };

@@ -7,8 +7,23 @@
       "RelativeMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|solutionrelative:test_allCachePolices\\test_allCachePolices.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KHashLRUCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|solutionrelative:KamaCaheDll\\KHashLRUCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\X64\\INCLUDE\\KAMACACHEDLL\\KLRUCACHE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|solutionrelative:X64\\INCLUDE\\KAMACACHEDLL\\KLRUCACHE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\TemplateExport.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|solutionrelative:KamaCaheDll\\TemplateExport.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KLRUCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|solutionrelative:KamaCaheDll\\KLRUCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\SOFTWARE\\VS\\VS2022\\VC\\TOOLS\\MSVC\\14.44.35207\\INCLUDE\\VECTOR||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\LRUCache.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -19,23 +34,12 @@
       "RelativeMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|solutionrelative:KamaCaheDll\\KamaCahePolicy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|D:\\STUDY\\IMPROVE\\SELF\\KAMACAHE\\KAMACAHE\\X64\\INCLUDE\\KAMACACHEDLL\\LRUCACHE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\X64\\INCLUDE\\KAMACACHEDLL\\LRUCACHE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|solutionrelative:X64\\INCLUDE\\KAMACACHEDLL\\LRUCACHE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\TemplateExport.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|solutionrelative:KamaCaheDll\\TemplateExport.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\X64\\INCLUDE\\KAMACACHEDLL\\KLRUCACHE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{704F6F58-8DBA-4B13-9802-FF9173FC6F13}|test_allCachePolices\\test_allCachePolices.vcxproj|solutionrelative:X64\\INCLUDE\\KAMACACHEDLL\\KLRUCACHE.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\LRUNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|solutionrelative:KamaCaheDll\\LRUNode.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39C11E20-299F-4757-9CB0-FC6CE8003BC6}|KamaCaheDll\\KamaCaheDll.vcxproj|D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\ExportKamaCacheDll.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -65,20 +69,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LRUCache.h",
-              "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\LRUCache.h",
-              "RelativeDocumentMoniker": "KamaCaheDll\\LRUCache.h",
-              "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\LRUCache.h",
-              "RelativeToolTip": "KamaCaheDll\\LRUCache.h",
-              "ViewState": "AgIAADoAAAAAAAAAAAAiwD0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-03T07:08:21.188Z",
+              "DocumentIndex": 5,
+              "Title": "vector",
+              "DocumentMoniker": "D:\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector",
+              "ToolTip": "D:\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\vector",
+              "ViewState": "AgIAAKsFAAAAAAAAAADwv7QFAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-03T09:48:19.862Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "KHashLRUCache.h",
+              "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KHashLRUCache.h",
+              "RelativeDocumentMoniker": "KamaCaheDll\\KHashLRUCache.h",
+              "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KHashLRUCache.h",
+              "RelativeToolTip": "KamaCaheDll\\KHashLRUCache.h",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvw4AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-03T08:59:25.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "KamaCahePolicy.h",
               "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KamaCahePolicy.h",
               "RelativeDocumentMoniker": "KamaCaheDll\\KamaCahePolicy.h",
@@ -86,38 +103,24 @@
               "RelativeToolTip": "KamaCaheDll\\KamaCahePolicy.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-03T00:33:07.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T00:33:07.947Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KLRUCache.h",
-              "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KLRUCache.h",
-              "RelativeDocumentMoniker": "KamaCaheDll\\KLRUCache.h",
-              "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KLRUCache.h",
-              "RelativeToolTip": "KamaCaheDll\\KLRUCache.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-03T00:33:12.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "TemplateExport.cpp",
               "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\TemplateExport.cpp",
               "RelativeDocumentMoniker": "KamaCaheDll\\TemplateExport.cpp",
               "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\TemplateExport.cpp",
               "RelativeToolTip": "KamaCaheDll\\TemplateExport.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-03T03:00:53.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "LRUNode.h",
               "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\LRUNode.h",
               "RelativeDocumentMoniker": "KamaCaheDll\\LRUNode.h",
@@ -129,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "LRUCache.h",
               "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\x64\\include\\KamaCacheDll\\LRUCache.h",
               "RelativeDocumentMoniker": "x64\\include\\KamaCacheDll\\LRUCache.h",
@@ -137,8 +140,7 @@
               "RelativeToolTip": "x64\\include\\KamaCacheDll\\LRUCache.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-03T01:38:05.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-03T01:38:05.691Z"
             },
             {
               "$type": "Document",
@@ -148,14 +150,52 @@
               "RelativeDocumentMoniker": "test_allCachePolices\\test_allCachePolices.cpp",
               "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\test_allCachePolices\\test_allCachePolices.cpp",
               "RelativeToolTip": "test_allCachePolices\\test_allCachePolices.cpp",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAwEYAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAHYBAAAAAAAAAAAAwI4BAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-10-31T09:16:39.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
+              "Title": "KLRUCache.h",
+              "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KLRUCache.h",
+              "RelativeDocumentMoniker": "KamaCaheDll\\KLRUCache.h",
+              "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\KLRUCache.h",
+              "RelativeToolTip": "KamaCaheDll\\KLRUCache.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvyYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-03T00:33:12.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KLRUCache.h",
+              "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\x64\\include\\KamaCacheDll\\KLRUCache.h",
+              "RelativeDocumentMoniker": "x64\\include\\KamaCacheDll\\KLRUCache.h",
+              "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\x64\\include\\KamaCacheDll\\KLRUCache.h",
+              "RelativeToolTip": "x64\\include\\KamaCacheDll\\KLRUCache.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-03T01:42:25.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LRUCache.h",
+              "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\LRUCache.h",
+              "RelativeDocumentMoniker": "KamaCaheDll\\LRUCache.h",
+              "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\LRUCache.h",
+              "RelativeToolTip": "KamaCaheDll\\LRUCache.h",
+              "ViewState": "AgIAADoAAAAAAAAAAAAiwD0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-11-03T07:08:21.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ExportKamaCacheDll.h",
               "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\KamaCaheDll\\ExportKamaCacheDll.h",
               "RelativeDocumentMoniker": "KamaCaheDll\\ExportKamaCacheDll.h",
@@ -167,32 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KLRUCache.h",
-              "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\x64\\include\\KamaCacheDll\\KLRUCache.h",
-              "RelativeDocumentMoniker": "x64\\include\\KamaCacheDll\\KLRUCache.h",
-              "ToolTip": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\x64\\include\\KamaCacheDll\\KLRUCache.h",
-              "RelativeToolTip": "x64\\include\\KamaCacheDll\\KLRUCache.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-03T01:42:25.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "memory",
-              "DocumentMoniker": "D:\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
-              "ToolTip": "D:\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\software\\vs\\vs2022\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
-              "ViewState": "AgIAAHYEAAAAAAAAAAAcwIcEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-03T03:14:47.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "LRUNode.h",
               "DocumentMoniker": "D:\\study\\improve\\self\\KamaCahe\\KamaCahe\\x64\\include\\KamaCacheDll\\LRUNode.h",
               "RelativeDocumentMoniker": "x64\\include\\KamaCacheDll\\LRUNode.h",

@@ -15,19 +15,28 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUNode.h(49,39): warning C4
       D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(1565,7):
       参见“std::shared_ptr<LRUNode<Key,Value>>”的声明
   
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44): warning C4251: “KLRUCache<Key,Value>::m_historyList”:“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”需要有 dll 接口以供“KLRUCache<Key,Value>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44): warning C4251: “KLRUCache<Key,Value>::m_historyList”:“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”需要有 dll 接口以供“KLRUCache<Key,Value>”的客户端使用
   (编译源文件“/TemplateExport.cpp”)
       D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
       参见“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”的声明
-      D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44):
+      D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44):
       模板实例化上下文(最早的实例化上下文)为
           D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(8,21):
           在编译类模板“KLRUCache”时
   
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning C4251: “KLRUCache<Key,Value>::m_historyValueMap”:“std::unordered_map<Key,Value,std::hash<_Kty>,std::equal_to<_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>”需要有 dll 接口以供“KLRUCache<Key,Value>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(73,36): warning C4251: “KLRUCache<Key,Value>::m_historyValueMap”:“std::unordered_map<Key,Value,std::hash<_Kty>,std::equal_to<_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>”需要有 dll 接口以供“KLRUCache<Key,Value>”的客户端使用
   (编译源文件“/TemplateExport.cpp”)
       D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\unordered_map(61,7):
       参见“std::unordered_map<Key,Value,std::hash<_Kty>,std::equal_to<_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>”的声明
+  
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(61,54): warning C4251: “KHashLRUCache<Key,Value>::m_lruSliceCachesVector”:“std::vector<std::shared_ptr<KLRUCache<Key,Value>>,std::allocator<std::shared_ptr<KLRUCache<Key,Value>>>>”需要有 dll 接口以供“KHashLRUCache<Key,Value>”的客户端使用
+  (编译源文件“/TemplateExport.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\vector(442,7):
+      参见“std::vector<std::shared_ptr<KLRUCache<Key,Value>>,std::allocator<std::shared_ptr<KLRUCache<Key,Value>>>>”的声明
+      D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(61,54):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(13,21):
+          在编译类模板“KHashLRUCache”时
   
 D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10): warning C4251: “LRUCache<int,std::string>::m_cacheMap”:“std::unordered_map<Key,std::shared_ptr<LRUNode<Key,Value>>,std::hash<int>,std::equal_to<Key>,std::allocator<std::pair<const Key,std::shared_ptr<LRUNode<Key,Value>>>>>”需要有 dll 接口以供“LRUCache<int,std::string>”的客户端使用
 D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10): warning C4251:         with
@@ -45,7 +54,7 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10): warning 
           ]
       D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10):
       模板实例化上下文(最早的实例化上下文)为
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(11,56):
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(12,56):
           查看对正在编译的 类 模板 实例化“LRUCache<int,std::string>”的引用
   
 D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(204,10): warning C4251: “LRUCache<int,std::string>::m_dummyHead”:“std::shared_ptr<LRUNode<Key,Value>>”需要有 dll 接口以供“LRUCache<int,std::string>”的客户端使用
@@ -83,11 +92,11 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(206,13): warning 
       D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\mutex(98,19):
       参见“std::mutex”的声明
   
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44): warning C4251: “KLRUCache<int,std::string>::m_historyList”:“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”需要有 dll 接口以供“KLRUCache<int,std::string>”的客户端使用
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44): warning C4251:         with
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44): warning C4251:         [
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44): warning C4251:             Key=int
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44): warning C4251:         ]
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44): warning C4251: “KLRUCache<int,std::string>::m_historyList”:“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”需要有 dll 接口以供“KLRUCache<int,std::string>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44): warning C4251:             Key=int
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44): warning C4251:         ]
   (编译源文件“/TemplateExport.cpp”)
       D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
       参见“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”的声明
@@ -95,17 +104,17 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44): warning 
           [
               Key=int
           ]
-      D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(69,44):
+      D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(72,44):
       模板实例化上下文(最早的实例化上下文)为
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(12,57):
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(13,57):
           查看对正在编译的 类 模板 实例化“KLRUCache<int,std::string>”的引用
   
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning C4251: “KLRUCache<int,std::string>::m_historyValueMap”:“std::unordered_map<Key,Value,std::hash<int>,std::equal_to<Key>,std::allocator<std::pair<const Key,Value>>>”需要有 dll 接口以供“KLRUCache<int,std::string>”的客户端使用
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning C4251:         with
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning C4251:         [
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning C4251:             Key=int,
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning C4251:             Value=std::string
-D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning C4251:         ]
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(73,36): warning C4251: “KLRUCache<int,std::string>::m_historyValueMap”:“std::unordered_map<Key,Value,std::hash<int>,std::equal_to<Key>,std::allocator<std::pair<const Key,Value>>>”需要有 dll 接口以供“KLRUCache<int,std::string>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(73,36): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(73,36): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(73,36): warning C4251:             Key=int,
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(73,36): warning C4251:             Value=std::string
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(73,36): warning C4251:         ]
   (编译源文件“/TemplateExport.cpp”)
       D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\unordered_map(61,7):
       参见“std::unordered_map<Key,Value,std::hash<int>,std::equal_to<Key>,std::allocator<std::pair<const Key,Value>>>”的声明
@@ -114,6 +123,24 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(70,36): warning 
               Key=int,
               Value=std::string
           ]
+  
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(61,54): warning C4251: “KHashLRUCache<int,std::string>::m_lruSliceCachesVector”:“std::vector<std::shared_ptr<KLRUCache<int,std::string>>,std::allocator<std::shared_ptr<KLRUCache<int,std::string>>>>”需要有 dll 接口以供“KHashLRUCache<int,std::string>”的客户端使用
+  (编译源文件“/TemplateExport.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\vector(442,7):
+      参见“std::vector<std::shared_ptr<KLRUCache<int,std::string>>,std::allocator<std::shared_ptr<KLRUCache<int,std::string>>>>”的声明
+      D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(61,54):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(14,61):
+          查看对正在编译的 类 模板 实例化“KHashLRUCache<int,std::string>”的引用
+  
+D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(21,28): warning C4244: “初始化”: 从“double”转换到“size_t”，可能丢失数据
+  (编译源文件“/TemplateExport.cpp”)
+      D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(21,28):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(14,61):
+          查看对正在编译的 类 模板 实例化“KHashLRUCache<int,std::string>”的引用
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(16,2):
+          在编译 类 模板 成员函数“KHashLRUCache<int,std::string>::KHashLRUCache(size_t,int)”时
   
 D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10): warning C4251: “LRUCache<Key,size_t>::m_cacheMap”:“std::unordered_map<Key,std::shared_ptr<LRUNode<Key,Value>>,std::hash<int>,std::equal_to<Key>,std::allocator<std::pair<const Key,std::shared_ptr<LRUNode<Key,Value>>>>>”需要有 dll 接口以供“LRUCache<Key,size_t>”的客户端使用
 D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10): warning C4251:         with
@@ -130,16 +157,18 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10): warning 
           ]
       D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(203,10):
       模板实例化上下文(最早的实例化上下文)为
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(12,57):
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(13,57):
           查看对正在编译的 类 模板 实例化“KLRUCache<int,std::string>”的引用
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(48,10):
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(51,10):
           在编译 类 模板 成员函数“void KLRUCache<int,std::string>::put(Key,Value)”时
           with
           [
               Key=int,
               Value=std::string
           ]
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(55,31):
+              D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(29,42):
+              请参阅 "KHashLRUCache<int,std::string>::put" 中对 "KLRUCache<int,std::string>::put" 的第一个引用
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(58,31):
           查看对正在编译的 类 模板 实例化“LRUCache<Key,size_t>”的引用
           with
           [
@@ -194,7 +223,7 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUNode.h(46,8): warning C42
       参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
       D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUNode.h(46,8):
       模板实例化上下文(最早的实例化上下文)为
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(11,56):
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\TemplateExport.cpp(12,56):
           查看对正在编译的 类 模板 实例化“LRUCache<int,std::string>”的引用
           D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(184,7):
           在编译 类 模板 成员函数“bool LRUCache<int,std::string>::deleteLRUNode(void)”时
@@ -252,14 +281,16 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUNode.h(48,37): warning C4
           ]
       D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUNode.h(48,37):
       模板实例化上下文(最早的实例化上下文)为
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(48,10):
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(51,10):
           在编译 类 模板 成员函数“void KLRUCache<int,std::string>::put(Key,Value)”时
           with
           [
               Key=int,
               Value=std::string
           ]
-          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(55,31):
+              D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(29,42):
+              请参阅 "KHashLRUCache<int,std::string>::put" 中对 "KLRUCache<int,std::string>::put" 的第一个引用
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(58,31):
           查看对正在编译的 类 模板 实例化“LRUCache<Key,size_t>”的引用
           with
           [
@@ -271,12 +302,14 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUNode.h(48,37): warning C4
           [
               Key=int
           ]
-              D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(61,34):
+              D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h(64,34):
               请参阅 "KLRUCache<int,std::string>::put" 中对 "LRUCache<Key,size_t>::remove" 的第一个引用
           with
           [
               Key=int
           ]
+              D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(29,42):
+              请参阅 "KHashLRUCache<int,std::string>::put" 中对 "KLRUCache<int,std::string>::put" 的第一个引用
           D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h(85,7):
           查看对正在编译的 类 模板 实例化“LRUNode<Key,Value>”的引用
           with
@@ -300,13 +333,34 @@ D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUNode.h(49,39): warning C4
               Value=size_t
           ]
   
+D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\xutility(476,82): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  (编译源文件“/TemplateExport.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\xutility(476,82):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(16,2):
+          在编译 类 模板 成员函数“KHashLRUCache<int,std::string>::KHashLRUCache(size_t,int)”时
+          D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h(23,45):
+          查看对正在编译的函数 模板 实例化“std::shared_ptr<KLRUCache<int,std::string>> std::make_shared<KLRUCache<int,std::string>,size_t&,size_t&,int>(size_t &,size_t &,int &&)”的引用
+          D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(2913,46):
+          查看对正在编译的函数 模板 实例化“std::_Ref_count_obj2<KLRUCache<int,std::string>>::_Ref_count_obj2<size_t&,size_t&,_Ty>(size_t &,size_t &,_Ty &&)”的引用
+          with
+          [
+              _Ty=int
+          ]
+          D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(2100,18):
+          查看对正在编译的函数 模板 实例化“void std::_Construct_in_place<_Ty,size_t&,size_t&,int>(_Ty &,size_t &,size_t &,int &&) noexcept(false)”的引用
+          with
+          [
+              _Ty=KLRUCache<int,std::string>
+          ]
+  
     正在创建库 D:\study\improve\self\KamaCahe\KamaCahe\x64\bin\KamaCaheDll.lib 和对象 D:\study\improve\self\KamaCahe\KamaCahe\x64\bin\KamaCaheDll.exp
   正在生成代码
   Previous IPDB not found, fall back to full compilation.
-  All 756 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 861 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   已完成代码的生成
   KamaCaheDll.vcxproj -> D:\study\improve\self\KamaCahe\KamaCahe\x64\bin\KamaCaheDll.dll
   Copying all header files...
+  D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KHashLRUCache.h
   D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\KLRUCache.h
-  D:\study\improve\self\KamaCahe\KamaCahe\KamaCaheDll\LRUCache.h
   复制了 2 个文件

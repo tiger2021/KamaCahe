@@ -152,6 +152,7 @@ xcopy "$(ProjectDir)*.h" "$(SolutionDir)\$(Platform)\include\KamaCacheDll\" /Y /
       </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Outputs)</Outputs>
     </CustomBuild>
+    <ClInclude Include="KHashLRUCache.h" />
     <ClInclude Include="LRUCache.h">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xcopy "$(ItemPath)" "$(SolutionDir)include\KamaCacheDll\" /Y /D /I</Command>
     </ClInclude>

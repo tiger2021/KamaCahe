@@ -9,6 +9,10 @@
 #include "KLRUCache.h"
 #include "LRUCache.h"
 #include "KamaCahePolicy.h"
+#include "KHashLRUCache.h"
+#include <thread>
+#include <atomic>
+#include <functional>
 #include <array>
 //#include "KICachePolicy.h"
 //#include "KLfuCache.h"
@@ -209,97 +213,189 @@ void testLoopPattern() {
     printResults("循环扫描测试", CAPACITY, get_operations, hits);
 }
 
-//void testWorkloadShift() {
-//    std::cout << "\n=== 测试场景3：工作负载剧烈变化测试 ===" << std::endl;
-//    
-//    const int CAPACITY = 30;            // 缓存容量
-//    const int OPERATIONS = 80000;       // 总操作次数
-//    const int PHASE_LENGTH = OPERATIONS / 5;  // 每个阶段的长度
-//    
-//     KLruCache<int, std::string> lru(CAPACITY);
-//     KLfuCache<int, std::string> lfu(CAPACITY);
-//     KArcCache<int, std::string> arc(CAPACITY);
-//     KLruKCache<int, std::string> lruk(CAPACITY, 500, 2);
-//     KLfuCache<int, std::string> lfuAging(CAPACITY, 10000);
-//
-//    std::random_device rd;
-//    std::mt19937 gen(rd());
-//    std::array< KICachePolicy<int, std::string>*, 5> caches = {&lru, &lfu, &arc, &lruk, &lfuAging};
-//    std::vector<int> hits(5, 0);
-//    std::vector<int> get_operations(5, 0);
-//    std::vector<std::string> names = {"LRU", "LFU", "ARC", "LRU-K", "LFU-Aging"};
-//
-//    // 为每种缓存算法运行相同的测试
-//    for (int i = 0; i < caches.size(); ++i) { 
-//        // 先预热缓存，只插入少量初始数据
-//        for (int key = 0; key < 30; ++key) {
-//            std::string value = "init" + std::to_string(key);
-//            caches[i]->put(key, value);
-//        }
-//        
-//        // 进行多阶段测试，每个阶段有不同的访问模式
-//        for (int op = 0; op < OPERATIONS; ++op) {
-//            // 确定当前阶段
-//            int phase = op / PHASE_LENGTH;
-//            
-//            // 每个阶段的读写比例不同 
-//            int putProbability;
-//            switch (phase) {
-//                case 0: putProbability = 15; break;  // 阶段1: 热点访问，15%写入更合理
-//                case 1: putProbability = 30; break;  // 阶段2: 大范围随机，写比例为30%
-//                case 2: putProbability = 10; break;  // 阶段3: 顺序扫描，10%写入保持不变
-//                case 3: putProbability = 25; break;  // 阶段4: 局部性随机，微调为25%
-//                case 4: putProbability = 20; break;  // 阶段5: 混合访问，调整为20%
-//                default: putProbability = 20;
-//            }
-//            
-//            // 确定是读还是写操作
-//            bool isPut = (gen() % 100 < putProbability);
-//            
-//            // 根据不同阶段选择不同的访问模式生成key - 优化后的访问范围
-//            int key;
-//            if (op < PHASE_LENGTH) {  // 阶段1: 热点访问 - 热点数量5，使热点更集中
-//                key = gen() % 5;
-//            } else if (op < PHASE_LENGTH * 2) {  // 阶段2: 大范围随机 - 范围400，更适合30大小的缓存
-//                key = gen() % 400;
-//            } else if (op < PHASE_LENGTH * 3) {  // 阶段3: 顺序扫描 - 保持100个键
-//                key = (op - PHASE_LENGTH * 2) % 100;
-//            } else if (op < PHASE_LENGTH * 4) {  // 阶段4: 局部性随机 - 优化局部性区域大小
-//                // 产生5个局部区域，每个区域大小为15个键，与缓存大小20接近但略小
-//                int locality = (op / 800) % 5;  // 调整为5个局部区域
-//                key = locality * 15 + (gen() % 15);  // 每区域15个键
-//            } else {  // 阶段5: 混合访问 - 增加热点访问比例
-//                int r = gen() % 100;
-//                if (r < 40) {  // 40%概率访问热点（从30%增加）
-//                    key = gen() % 5;  // 5个热点键
-//                } else if (r < 70) {  // 30%概率访问中等范围
-//                    key = 5 + (gen() % 45);  // 缩小中等范围为50个键
-//                } else {  // 30%概率访问大范围（从40%减少）
-//                    key = 50 + (gen() % 350);  // 大范围也相应缩小
-//                }
-//            }
-//            
-//            if (isPut) {
-//                // 执行写操作
-//                std::string value = "value" + std::to_string(key) + "_p" + std::to_string(phase);
-//                caches[i]->put(key, value);
-//            } else {
-//                // 执行读操作并记录命中情况
-//                std::string result;
-//                get_operations[i]++;
-//                if (caches[i]->get(key, result)) {
-//                    hits[i]++;
-//                }
-//            }
-//        }
-//    }
-//
-//    printResults("工作负载剧烈变化测试", CAPACITY, get_operations, hits);
-//}
+void testWorkloadShift() {
+    std::cout << "\n=== 测试场景3：工作负载剧烈变化测试 ===" << std::endl;
+    
+    const int CAPACITY = 30;            // 缓存容量
+    const int OPERATIONS = 800000;       // 总操作次数
+    const int PHASE_LENGTH = OPERATIONS / 5;  // 每个阶段的长度
+    
+    LRUCache<int, std::string> lru(CAPACITY);
+    KLRUCache<int, std::string> klru(CAPACITY,500,2);
+     /*KArcCache<int, std::string> arc(CAPACITY);
+     KLruKCache<int, std::string> lruk(CAPACITY, 500, 2);
+     KLfuCache<int, std::string> lfuAging(CAPACITY, 10000);*/
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::array< KamaCachePolicy<int, std::string>*,2> caches = {&lru,&klru};
+    std::vector<int> hits(2, 0);
+    std::vector<int> get_operations(2, 0);
+    std::vector<std::string> names = {"LRU", "KLRU"};
+
+    // 为每种缓存算法运行相同的测试
+    for (int i = 0; i < caches.size(); ++i) { 
+        // 先预热缓存，只插入少量初始数据
+        for (int key = 0; key < 30; ++key) {
+            std::string value = "init" + std::to_string(key);
+            caches[i]->put(key, value);
+        }
+        
+        // 进行多阶段测试，每个阶段有不同的访问模式
+        for (int op = 0; op < OPERATIONS; ++op) {
+            // 确定当前阶段
+            int phase = op / PHASE_LENGTH;
+            
+            // 每个阶段的读写比例不同 
+            int putProbability;
+            switch (phase) {
+                case 0: putProbability = 15; break;  // 阶段1: 热点访问，15%写入更合理
+                case 1: putProbability = 30; break;  // 阶段2: 大范围随机，写比例为30%
+                case 2: putProbability = 10; break;  // 阶段3: 顺序扫描，10%写入保持不变
+                case 3: putProbability = 25; break;  // 阶段4: 局部性随机，微调为25%
+                case 4: putProbability = 20; break;  // 阶段5: 混合访问，调整为20%
+                default: putProbability = 20;
+            }
+            
+            // 确定是读还是写操作
+            bool isPut = (gen() % 100 < putProbability);
+            
+            // 根据不同阶段选择不同的访问模式生成key - 优化后的访问范围
+            int key;
+            if (op < PHASE_LENGTH) {  // 阶段1: 热点访问 - 热点数量5，使热点更集中
+                key = gen() % 5;
+            } else if (op < PHASE_LENGTH * 2) {  // 阶段2: 大范围随机 - 范围400，更适合30大小的缓存
+                key = gen() % 400;
+            } else if (op < PHASE_LENGTH * 3) {  // 阶段3: 顺序扫描 - 保持100个键
+                key = (op - PHASE_LENGTH * 2) % 100;
+            } else if (op < PHASE_LENGTH * 4) {  // 阶段4: 局部性随机 - 优化局部性区域大小
+                // 产生5个局部区域，每个区域大小为15个键，与缓存大小20接近但略小
+                int locality = (op / 800) % 5;  // 调整为5个局部区域
+                key = locality * 15 + (gen() % 15);  // 每区域15个键
+            } else {  // 阶段5: 混合访问 - 增加热点访问比例
+                int r = gen() % 100;
+                if (r < 40) {  // 40%概率访问热点（从30%增加）
+                    key = gen() % 5;  // 5个热点键
+                } else if (r < 70) {  // 30%概率访问中等范围
+                    key = 5 + (gen() % 45);  // 缩小中等范围为50个键
+                } else {  // 30%概率访问大范围（从40%减少）
+                    key = 50 + (gen() % 350);  // 大范围也相应缩小
+                }
+            }
+            
+            if (isPut) {
+                // 执行写操作
+                std::string value = "value" + std::to_string(key) + "_p" + std::to_string(phase);
+                caches[i]->put(key, value);
+            } else {
+                // 执行读操作并记录命中情况
+                std::string result;
+                get_operations[i]++;
+                if (caches[i]->get(key, result)) {
+                    hits[i]++;
+                }
+            }
+        }
+    }
+
+    printResults("工作负载剧烈变化测试", CAPACITY, get_operations, hits);
+}
+
+void testKHashLRUCacheConcurrent(size_t capacity = 1000,
+    int sliceNum = 8,
+    int loopSize = 1000,
+    int threadCount = std::thread::hardware_concurrency(),
+    int opsPerThread = 50000)
+{
+    std::cout << "\n=== 测试：KHashLRUCache 高并发 ===\n";
+    std::cout << "capacity=" << capacity
+        << " sliceNum=" << sliceNum
+        << " loopSize=" << loopSize
+        << " threads=" << threadCount
+        << " ops/thread=" << opsPerThread << std::endl;
+
+    KHashLRUCache<int, std::string> cache(static_cast<size_t>(capacity), sliceNum);
+
+    std::atomic<long long> total_gets{ 0 };
+    std::atomic<long long> total_puts{ 0 };
+    std::atomic<long long> total_hits{ 0 };
+
+    auto start_time = std::chrono::high_resolution_clock::now();
+
+    std::vector<std::thread> workers;
+    workers.reserve(threadCount);
+
+    for (int t = 0; t < threadCount; ++t) {
+        workers.emplace_back([&, t]() {
+            // 每线程使用独立 RNG，避免锁争用
+            std::mt19937_64 rng(static_cast<unsigned long long>(std::random_device{}()) ^ (static_cast<unsigned long long>(t) << 16));
+            std::uniform_int_distribution<int> keySeqDist(0, loopSize - 1);
+            std::uniform_int_distribution<int> keyOutDist(loopSize, loopSize * 2 - 1);
+            std::uniform_int_distribution<int> opDist(0, 99); // 用于决定 put/get
+
+            int current_pos = t % loopSize; // 每线程不同的起点，增加并发冲突覆盖
+            for (int i = 0; i < opsPerThread; ++i) {
+                int op = opDist(rng);
+                bool isPut = (op < 20); // 20% put, 80% get
+
+                int key;
+                int mode = i % 100;
+                if (mode < 60) { // 60% 顺序扫描
+                    key = current_pos;
+                    current_pos = (current_pos + 1) % loopSize;
+                }
+                else if (mode < 90) { // 30% 随机跳跃
+                    key = static_cast<int>(keySeqDist(rng));
+                }
+                else { // 10% 访问范围外数据
+                    key = static_cast<int>(keyOutDist(rng));
+                }
+
+                if (isPut) {
+                    std::string val = "v_" + std::to_string(key) + "_" + std::to_string(i % 1000);
+                    cache.put(key, val);
+                    total_puts.fetch_add(1, std::memory_order_relaxed);
+                }
+                else {
+                    std::string result;
+                    total_gets.fetch_add(1, std::memory_order_relaxed);
+                    if (cache.get(key, result)) {
+                        total_hits.fetch_add(1, std::memory_order_relaxed);
+                    }
+                }
+            }
+            });
+    }
+
+    for (auto& th : workers) th.join();
+
+    auto end_time = std::chrono::high_resolution_clock::now();
+    auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+
+    long long gets = total_gets.load();
+    long long puts = total_puts.load();
+    long long hits = total_hits.load();
+    double hit_rate = gets > 0 ? (static_cast<double>(hits) / static_cast<double>(gets)) * 100.0 : 0.0;
+    long long total_ops = gets + puts;
+
+    std::cout << "总耗时: " << elapsed_ms << " ms\n";
+    std::cout << "总操作: " << total_ops << " (gets=" << gets << ", puts=" << puts << ")\n";
+    std::cout << "命中: " << hits << "，命中率: " << hit_rate << "%\n";
+    std::cout << "吞吐: " << (total_ops * 1000.0 / std::max<long long>(1, elapsed_ms)) << " ops/s\n";
+}
 
 int main() {
 	testHotDataAccess();
 	testLoopPattern();
-	//testWorkloadShift();
+	testWorkloadShift();
+
+    //高并发压力测试
+    //testKHashLRUCacheConcurrent(
+    //    /*capacity=*/2000,
+    //    /*sliceNum=*/16,
+    //    /*loopSize=*/10000,
+    //    /*threadCount=*/std::max(4u, std::thread::hardware_concurrency()),
+    //    /*opsPerThread=*/100000
+    //);
 	return 0;
 }
