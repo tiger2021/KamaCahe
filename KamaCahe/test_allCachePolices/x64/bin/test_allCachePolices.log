@@ -1,0 +1,153 @@
+﻿  test_allCachePolices.cpp
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37): warning C4251: “LRUNode<Key,Value>::m_pre”:“std::weak_ptr<LRUNode<Key,Value>>”需要有 dll 接口以供“LRUNode<Key,Value>”的客户端使用
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(3136,7):
+      参见“std::weak_ptr<LRUNode<Key,Value>>”的声明
+      D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(10,21):
+          在编译类模板“LRUNode”时
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(49,39): warning C4251: “LRUNode<Key,Value>::m_next”:“std::shared_ptr<LRUNode<Key,Value>>”需要有 dll 接口以供“LRUNode<Key,Value>”的客户端使用
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(1565,7):
+      参见“std::shared_ptr<LRUNode<Key,Value>>”的声明
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\KLRUCache.h(69,44): warning C4251: “KLRUCache<Key,Value>::m_historyList”:“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”需要有 dll 接口以供“KLRUCache<Key,Value>”的客户端使用
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(3347,7):
+      参见“std::unique_ptr<LRUCache<Key,size_t>,std::default_delete<LRUCache<Key,size_t>>>”的声明
+      D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\KLRUCache.h(69,44):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\KLRUCache.h(8,21):
+          在编译类模板“KLRUCache”时
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\KLRUCache.h(70,36): warning C4251: “KLRUCache<Key,Value>::m_historyValueMap”:“std::unordered_map<Key,Value,std::hash<_Kty>,std::equal_to<_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>”需要有 dll 接口以供“KLRUCache<Key,Value>”的客户端使用
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\unordered_map(61,7):
+      参见“std::unordered_map<Key,Value,std::hash<_Kty>,std::equal_to<_Ty>,std::allocator<std::pair<const _Kty,_Ty>>>”的声明
+  
+D:\study\improve\self\KamaCahe\KamaCahe\test_allCachePolices\test_allCachePolices.cpp(24,83): warning C4244: “return”: 从“_Rep”转换到“double”，可能丢失数据
+D:\study\improve\self\KamaCahe\KamaCahe\test_allCachePolices\test_allCachePolices.cpp(24,83): warning C4244:         with
+D:\study\improve\self\KamaCahe\KamaCahe\test_allCachePolices\test_allCachePolices.cpp(24,83): warning C4244:         [
+D:\study\improve\self\KamaCahe\KamaCahe\test_allCachePolices\test_allCachePolices.cpp(24,83): warning C4244:             _Rep=__int64
+D:\study\improve\self\KamaCahe\KamaCahe\test_allCachePolices\test_allCachePolices.cpp(24,83): warning C4244:         ]
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(205,10): warning C4251: “LRUCache<int,std::string>::m_cacheMap”:“std::unordered_map<Key,std::shared_ptr<LRUNode<Key,Value>>,std::hash<int>,std::equal_to<Key>,std::allocator<std::pair<const Key,std::shared_ptr<LRUNode<Key,Value>>>>>”需要有 dll 接口以供“LRUCache<int,std::string>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(205,10): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(205,10): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(205,10): warning C4251:             Key=int,
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(205,10): warning C4251:             Value=std::string
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(205,10): warning C4251:         ]
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\unordered_map(61,7):
+      参见“std::unordered_map<Key,std::shared_ptr<LRUNode<Key,Value>>,std::hash<int>,std::equal_to<Key>,std::allocator<std::pair<const Key,std::shared_ptr<LRUNode<Key,Value>>>>>”的声明
+          with
+          [
+              Key=int,
+              Value=std::string
+          ]
+      D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(205,10):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\test_allCachePolices\test_allCachePolices.cpp(73,30):
+          查看对正在编译的 类 模板 实例化“LRUCache<int,std::string>”的引用
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(206,10): warning C4251: “LRUCache<int,std::string>::m_dummyHead”:“std::shared_ptr<LRUNode<Key,Value>>”需要有 dll 接口以供“LRUCache<int,std::string>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(206,10): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(206,10): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(206,10): warning C4251:             Key=int,
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(206,10): warning C4251:             Value=std::string
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(206,10): warning C4251:         ]
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(1565,7):
+      参见“std::shared_ptr<LRUNode<Key,Value>>”的声明
+          with
+          [
+              Key=int,
+              Value=std::string
+          ]
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(207,10): warning C4251: “LRUCache<int,std::string>::m_dummyTail”:“std::shared_ptr<LRUNode<Key,Value>>”需要有 dll 接口以供“LRUCache<int,std::string>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(207,10): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(207,10): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(207,10): warning C4251:             Key=int,
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(207,10): warning C4251:             Value=std::string
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(207,10): warning C4251:         ]
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(1565,7):
+      参见“std::shared_ptr<LRUNode<Key,Value>>”的声明
+          with
+          [
+              Key=int,
+              Value=std::string
+          ]
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(208,13): warning C4251: “LRUCache<int,std::string>::m_mutex”:“std::mutex”需要有 dll 接口以供“LRUCache<int,std::string>”的客户端使用
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\mutex(98,19):
+      参见“std::mutex”的声明
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(46,8): warning C4251: “LRUNode<Key,Value>::m_value”:“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”需要有 dll 接口以供“LRUNode<Key,Value>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(46,8): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(46,8): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(46,8): warning C4251:             Key=int,
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(46,8): warning C4251:             Value=std::string
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(46,8): warning C4251:         ]
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\xstring(541,7):
+      参见“std::basic_string<char,std::char_traits<char>,std::allocator<char>>”的声明
+      D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(46,8):
+      模板实例化上下文(最早的实例化上下文)为
+          D:\study\improve\self\KamaCahe\KamaCahe\test_allCachePolices\test_allCachePolices.cpp(73,30):
+          查看对正在编译的 类 模板 实例化“LRUCache<int,std::string>”的引用
+          D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(63,7):
+          在编译 类 模板 成员函数“bool LRUCache<int,std::string>::get(Key,Value &)”时
+          with
+          [
+              Key=int,
+              Value=std::string
+          ]
+              D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(79,14):
+              请参阅 "LRUCache<int,std::string>::get" 中对 "LRUCache<int,std::string>::get" 的第一个引用
+          D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUCache.h(66,7):
+          查看对正在编译的 类 模板 实例化“LRUNode<Key,Value>”的引用
+          with
+          [
+              Key=int,
+              Value=std::string
+          ]
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37): warning C4251: “LRUNode<Key,Value>::m_pre”:“std::weak_ptr<LRUNode<Key,Value>>”需要有 dll 接口以供“LRUNode<Key,Value>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37): warning C4251:             Key=int,
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37): warning C4251:             Value=std::string
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(48,37): warning C4251:         ]
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(3136,7):
+      参见“std::weak_ptr<LRUNode<Key,Value>>”的声明
+          with
+          [
+              Key=int,
+              Value=std::string
+          ]
+  
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(49,39): warning C4251: “LRUNode<Key,Value>::m_next”:“std::shared_ptr<LRUNode<Key,Value>>”需要有 dll 接口以供“LRUNode<Key,Value>”的客户端使用
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(49,39): warning C4251:         with
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(49,39): warning C4251:         [
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(49,39): warning C4251:             Key=int,
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(49,39): warning C4251:             Value=std::string
+D:\study\improve\self\KamaCahe\KamaCahe\x64\include\KamaCacheDll\LRUNode.h(49,39): warning C4251:         ]
+  (编译源文件“test_allCachePolices.cpp”)
+      D:\software\vs\vs2022\VC\Tools\MSVC\14.44.35207\include\memory(1565,7):
+      参见“std::shared_ptr<LRUNode<Key,Value>>”的声明
+          with
+          [
+              Key=int,
+              Value=std::string
+          ]
+  
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 241 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  test_allCachePolices.vcxproj -> D:\study\improve\self\KamaCahe\KamaCahe\x64\bin\test_allCachePolices.exe

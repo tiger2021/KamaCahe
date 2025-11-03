@@ -70,6 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\bin\</OutDir>
+    <IntDir>$(Platform)\bin\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -123,7 +127,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;KAMACAHEDLL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;KAMACAHEDLL_EXPORTS;_WINDOWS;_USRDLL;KAMACACHE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -133,12 +137,27 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <PostBuildEvent>
+      <Command>echo Copying all header files...
+if not exist "$(SolutionDir)\$(Platform)\include\KamaCacheDll" mkdir "$(SolutionDir)\$(Platform)\include\KamaCacheDll"
+xcopy "$(ProjectDir)*.h" "$(SolutionDir)\$(Platform)\include\KamaCacheDll\" /Y /D /I</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ExportKamaCacheDll.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="KamaCahePolicy.h" />
-    <ClInclude Include="LRUCache.h" />
-    <ClInclude Include="LRUNode.h" />
+    <CustomBuild Include="KLRUCache.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="LRUCache.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xcopy "$(ItemPath)" "$(SolutionDir)include\KamaCacheDll\" /Y /D /I</Command>
+    </ClInclude>
+    <ClInclude Include="LRUNode.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xcopy "$(ItemPath)" "$(SolutionDir)include\KamaCacheDll\" /Y /D /I</Command>
+    </ClInclude>
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +168,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TemplateExport.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
