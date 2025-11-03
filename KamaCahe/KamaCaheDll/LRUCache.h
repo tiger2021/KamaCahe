@@ -53,9 +53,8 @@ public:
 		if (it != m_cacheMap.end()) {
 			// 更新已有节点的值并移动到最近使用位置
 			updateExistingNode(it->second, value);
-		}
-		else {
-			// 添加新节点
+		}else {
+			//只有在put的时候才添加新节点
 			addNewNode(key, value);
 		}
 	}
@@ -139,6 +138,11 @@ private:
 
 	// 添加新节点
 	bool addNewNode(const Key& key, const Value& value) {
+		NodePtr newNode = std::make_shared<LRUNodeType>(key, value);
+		if (!newNode) {
+			std::cout << "Create New Node Failed!" << std::endl;
+			return false;
+		}
 		if (m_cacheMap.size() >= m_capacity) {
 			// 删除最久未使用的节点
 			bool deleteFlag = deleteLRUNode();
@@ -147,19 +151,13 @@ private:
 				return false;
 			}
 		}
-		else {
-			NodePtr newNode = std::make_shared<LRUNodeType>(key, value);
-			if (!newNode) {
-				std::cout << "Create New Node Failed!" << std::endl;
-				return false;
-			}
-			// 插入到链表尾部（最近使用位置）
-			bool insertFlag = insertNodeAtTail(newNode);
-			if (!insertFlag) {
-				std::cout << "Insert New Node at Tail Failed!" << std::endl;
-				return false;
-			}
+		// 插入到链表尾部（最近使用位置）
+		bool insertFlag = insertNodeAtTail(newNode);
+		if (!insertFlag) {
+			std::cout << "Insert New Node at Tail Failed!" << std::endl;
+			return false;
 		}
+		m_cacheMap[key] = newNode;
 		return true;
 	}
 
